@@ -1,3 +1,51 @@
 //Cursor styling
+.cursor-ball {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+}
+
+.cursor-outline {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #000;
+  transition: all 0.5s ease;
+  transform-origin: 130% 100%;
+}
+
+.cursor-ball,
+.cursor-outline {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  display: none;
+  @include anyPointer {
+    display: block; 
+    pointer-events: none;
+  }
+}
+
+a.hovered-link {
+  color: #fff;
+  z-index: 100;
+}
 
 //Dynamic classes toggled with Javascript
+
+.cursor-mousedown {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #000;
+  background-color: #8454f4;
+}
+
+.scale-link {
+  transform: scale(1.5);
+  background: #000;
+}
+
+.hovered-link {
+  color: #fff;
+}
